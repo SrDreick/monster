@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Energy Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .video-background video {
+            min-width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .hero-section h1,
+        .hero-section p,
+        .hero-section a {
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero-section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+
+        .navbar-brand img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-lg {
+            z-index: 3;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: white !important; /* Asegura que los enlaces sean blancos */
+        }
+
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: #00ff00 !important; /* Opcional: cambia el color al pasar el cursor */
+        }
+
+        .game-container {
+            margin-top: 20px;
+            z-index: 3;
+        }
+
+        .game-container iframe {
+            border: 0.5px solid #00ff00;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: black;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="MonsterEnergy.png" alt="Monster Logo" width="120">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center">
+        <div class="video-background">
+            <video autoplay muted loop>
+                <source src="MONSTERENERGY.mp4" type="video/mp4">
+                Tu navegador no soporta el video.
+            </video>
+        </div>
+        <div>
+            <h1 class="display-1">Bienvenido a Monster Energy</h1>
+            <p class="lead">Potencia tu vida con la energía definitiva.</p>
+            <a href="#" class="btn btn-success btn-lg">Explorar Más</a>
+        </div>
+
+        <!-- Espacio para el videojuego -->
+        <div class="game-container">
+            <h2 class="text-white">¡Disfruta nuestro videojuego exclusivo!</h2>
+            <iframe 
+                src="./juegodenave1/index.html" 
+                width="1280" 
+                height="720" 
+                frameborder="0" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </header>
+
+    <!-- Descripción de Monster -->
+    <section class="descripcion-section py-5 text-center">
+        <div class="container">
+            <h2 class="mb-4">¿Qué es Monster Energy?</h2>
+            <p class="lead">Monster Energy no es solo una bebida, es un estilo de vida. Diseñado para atletas, músicos, aventureros y cualquiera que busque superar sus límites. Con una mezcla única de energía y sabor, Monster te impulsa a alcanzar lo imposible.</p>
+        </div>
+    </section>
+
+    <!-- Productos Section -->
+    <section class="productos-section py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Nuestros Productos</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="monster1.webp" class="img-fluid" alt="Producto 1" width="60">
+                    <h5 class="mt-3">Monster Original</h5>
+                </div>
+                <div class="col-md-4">
+                    <img src="monsterzero2.webp" class="img-fluid" alt="Producto 2" width="60">
+                    <h5 class="mt-3">Monster Zero Sugar</h5>
+                </div>
+                <div class="col-md-4">
+                    <img src="monsterultra.png" class="img-fluid" alt="Producto 3" width="60">
+                    <h5 class="mt-3">Monster Ultra</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Monster Energy Clone. Todos los derechos reservados.</p>
+            <a href="#" class="text-white">Política de Privacidad</a> | 
+            <a href="#" class="text-white">Términos y Condiciones</a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+/* Estilos personalizados */
+body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+}
+
+.productos-section img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
